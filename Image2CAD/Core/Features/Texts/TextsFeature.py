@@ -129,7 +129,7 @@ class TextsFeature:
         rotate_img = ImgTransform.ImgAspectResize(rotate_img,800,800)
         output_img_path = make_dir_rotate + "/rotate" + str(i) + ".png"
         cv2.imwrite(output_img_path, rotate_img)
-        detected_text = pytesseract.image_to_string(Image.open(output_img_path), config="-psm 6") #, lang='eng+eng13'
+        detected_text = pytesseract.image_to_string(Image.open(output_img_path), config="--psm 6") #, lang='eng+eng13'
                
         return output_img_path, detected_text
     

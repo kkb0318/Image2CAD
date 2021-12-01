@@ -69,8 +69,8 @@ def main(argv1):
     FM._DetectedArrowHead = BB_Arrows
     FM._ImageDetectedArrow = Arrow_Img
     print("Arrow Detection Complete...")
-    cv2.imshow("Detected Arrows", FM._ImageDetectedArrow)
-    cv2.waitKey(0)
+    # cv2.imshow("Detected Arrows", FM._ImageDetectedArrow)
+    # cv2.waitKey(0)
     
     for i in BB_Arrows:
         P1 = i._BoundingBoxP1
@@ -84,8 +84,8 @@ def main(argv1):
     FM._ImageDetectedDimensionalLine = DimensionalLine_Img
     FM._DetectedDimensionalLine = segments
     print("Dimensional Line Detection Complete...")
-    cv2.imshow("Detected Dimensional Lines", FM._ImageDetectedDimensionalLine)
-    cv2.waitKey(0)
+    # cv2.imshow("Detected Dimensional Lines", FM._ImageDetectedDimensionalLine)
+    # cv2.waitKey(0)
 
     for j in segments:
       for i in j._Leaders:
@@ -104,8 +104,8 @@ def main(argv1):
     FM._ImageDetectedDimensionalText = TextArea_Img
     FM._DetectedDimensionalText = ExtractedTextArea
     print("Text Area Extraction Complete...")
-    cv2.imshow("Detected Text Area", FM._ImageDetectedDimensionalText)
-    cv2.waitKey(0)
+    # cv2.imshow("Detected Text Area", FM._ImageDetectedDimensionalText)
+    # cv2.waitKey(0)
 
     for i in ExtractedTextArea:
         P1 = i._TextBoxP1
@@ -125,8 +125,8 @@ def main(argv1):
     FM._DetectedLine = segments
     FM._ImageDetectedLine = DetectedLine_Img
     print("Line Detection Complete...")
-    cv2.imshow("Detected Lines", FM._ImageDetectedLine)
-    cv2.waitKey(0)
+    # cv2.imshow("Detected Lines", FM._ImageDetectedLine)
+    # cv2.waitKey(0)
 
     print("Correlation of Support Lines Started...")
     SupportLinesFeature.Detect(FM)
@@ -157,8 +157,8 @@ def main(argv1):
     FM._ImageDetectedCircle = DetectedCircle_Img
     FM._DetectedCircle = detectedcircle
     print("Circle Detection Complete...")
-    cv2.imshow("Detected circles", FM._ImageDetectedCircle)
-    cv2.waitKey(0)
+    # cv2.imshow("Detected circles", FM._ImageDetectedCircle)
+    # cv2.waitKey(0)
 
     for i in detectedcircle:
         center = i._centre
